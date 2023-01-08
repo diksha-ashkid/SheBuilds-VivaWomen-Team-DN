@@ -21,12 +21,13 @@ Listing such as emergency helplines, daily needs such as restaurants, clinics et
 Once the user has signed up using their credentials and the location they want to discover, the web app uses the exact GPS location to give them the various services available around them. The user can log in time and again and update the services they would need so as to keep exploring more. The app also comes in Dark-Mode as prefffered by majority of users today.Thus the app proves to be a one stop destination for anybody trying to discover the local are as well as settle in with the community around.
 
 ## 1.1 Features
-1. Disease detection
-2. Disease management guide (with organic and inorganic treatment)
-3. Multilingual chat with subject experts
-4. Comparative product analysis
-5. Multilingual website (compatible with 113 languages)
-6. A simple, user-friendly interface
+1. Listing of Emergency helplines and contacts (police, ambulance etc).
+2. A set of all services from restarunts, clinics to repair services that are currently available.
+3. Lists of communities in the area for better support.
+4. Government schemes provided in that region for better use of law and its benefits.
+5. Web-App available in 113 languages using Google Translate API.
+6. Uses OpenLeaf API to find the current location so as to provide better services based on current location.
+7. Store info in database for returning userd and better experince.
 
 ## 2. Installation
 
@@ -69,11 +70,6 @@ The project will be running on (http://127.0.0.1:8000/)
 
   * [Diksha Chakravarty](https://github.com/diksha-ashkid)
   * [Nishtha Jain](https://github.com/2002nishthajain)
-
-## 5. Sponsor Tracks
-GoDaddy URL: lensfleur.co
-
-
 
 
 ## 6. Video Demonstration of Project:
