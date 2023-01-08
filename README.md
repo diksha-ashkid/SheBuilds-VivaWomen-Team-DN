@@ -30,6 +30,7 @@ Once the user has signed up using their credentials and the location they want t
 7. Uses OpenLeaf API to find the current location so as to provide better services based on current location.
 8. Store info in database for returning userd and better experince.
 9. Supports both light and dark mode.
+10. Easy and user friendly interface
 
 
 ![viva13](https://user-images.githubusercontent.com/89176434/211189219-f90f5299-2e46-47af-9ccc-3c5ca9bdd403.png)
