@@ -28,32 +28,30 @@ Once the user has signed up using their credentials and the location they want t
 5. Web-App available in 113 languages using Google Translate API.
 6. Uses OpenLeaf API to find the current location so as to provide better services based on current location.
 7. Store info in database for returning userd and better experince.
+8. Supports light and dark mode.
 
 ## 2. Installation
 
 ### 2.1. Requirements
 
-The project requires Python 3.6 or higher. The project also requires the following Python packages:
+VIVAWOMEN is a complete, adaptable, secure, scalable, maintainable, and portable online application that uses the following requirements for developing a fully-functional application, in addition to ensuring frontend and backend compatibility.
 
-  * tensorflow==2.10.1
-  * opencv-python==4.6.0
-  * matplotlib==3.6.0
-  * numpy==1.23.3
-  * flask==2.2.2
-  * geopy==2.3.0
-  * wikipedia==1.4.0
-  * exif==1.3.5
-  * flask-socketio==5.3.2
+  * Python 3.6 or above is required to develop the application's backend structure. Python is
+  used in the Django framework to link database server to applications.
+  * Django framework version of 4.0 or higher to integrate and map out database, backend, and
+  frontend.
+  * SQLITE3 is the database that is used to store user preferences.
+  * Google translate API to develop multilingual application.
+  * The Open Leaf API is used to track the location of the user.
+   
 
 ### 2.2. Installation
 
 To install the project, first clone the repository:
 
-`git clone 'https://github.com/diksha-ashkid/Centuriton-Hackathon_Flora.AI.git'`
+`git clone 'https://github.com/diksha-ashkid/SheBuilds-VivaWomen-Team-DN-Project.git'`
 
-Then, install the required packages:
-
-`pip install -r requirements.txt`
+Then, install the required packages.
 
 ## 3. Running the project
 
