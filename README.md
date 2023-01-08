@@ -3,7 +3,7 @@
 
 # Aim and Target
 ### Motive:-
-Unsafe in the City: The Everyday Experiences of Girls and Young Women. Cat-calling, stalking, groping and worse – it doesn’t matter where they live, girls face harassment and abuse on a daily basis all around the world, simply because of their gender.This stands as an obstruction in the path of growth and success of any women today. Thus becoming the first target to cross in order to achieve a society that empowers women.
+Cat-calling, stalking, groping, and worse — no matter where they reside, females experience harassment and abuse on a daily basis simply because of their gender all over the world. This stands as an obstruction in the path of growth and success of any women today. Thus becoming the first target to cross in order to achieve a society that empowers women.
 
 This gets worse with being in a new city or area which is new or completely unknown. Along with the lack of knowledge of that particular region safety also becomes a pre-requisite for a women to survive. With this many women are misguided and exploited whenever they are new to a location. Due to this reason a huge crowd of women do not migrate and this hinders their education, work and professional growth. 
 
