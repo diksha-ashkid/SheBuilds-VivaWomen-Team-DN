@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="schemes.css">
+  
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <script>
+        function loadGoogleTranslate()
+        {
+            new google.translate.TranslateElement("google_element");
+        }
+    </script>
+    <style>
+        body
+        { 
+            top: 0px !important; 
+            position: static !important; 
+        } 
+        .goog-te-banner-frame{
+            display:none !important
+        }
+        </style>
+  </head>
+  <style>
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #ecf9ff;
+}
+
+body {
+  color: #272727;
+  font-family: 'Quicksand', serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+}
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+img.a {
+  height: 275px;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 5rem;
+  background:rgba(51, 51, 51, 0.368);
+  border-color: #FFB2A6;
+  padding:.9rem 3.5rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+background-color: #95564d;
+background:#935349;
+}
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #FFB2A6;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: #9adcff00;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  background: #FFB2A6;
+}
+
+.card_title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+.made_by{
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 35px;
+  text-align: center;
+}
+
+  /* Google Font Import - Poppins */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+  }
+  
+  :root{
+      /* ===== Colors ===== */
+      --body-color: #ffe6e2;
+      --sidebar-color: #FFF;
+      --primary-color: #FFB2A6;
+      --primary-color-light: #F6F5FF;
+      --toggle-color: #DDD;
+      --text-color: #707070;
+  
+      /* ====== Transition ====== */
+      --tran-03: all 0.2s ease;
+      --tran-03: all 0.3s ease;
+      --tran-04: all 0.3s ease;
+      --tran-05: all 0.3s ease;
+  }
+  
+  body{
+      min-height: 100vh;
+      background-color: var(--body-color);
+      transition: var(--tran-05);
+  }
+  
+  ::selection{
+      background-color: var(--primary-color);
+      color: #fff;
+  }
+  
+  body.dark{
+      --body-color: #18191a;
+      --sidebar-color: #242526;
+      --primary-color: #3a3b3c;
+      --primary-color-light: #3a3b3c;
+      --toggle-color: #fff;
+      --text-color: #ccc;
+  }
+  
+  /* ===== Sidebar ===== */
+   .sidebar{
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      padding: 10px 14px;
+      background: var(--sidebar-color);
+      transition: var(--tran-05);
+      z-index: 100;  
+  }
+  .sidebar.close{
+      width: 88px;
+  }
+  
+  /* ===== Reusable code - Here ===== */
+  .sidebar li{
+      height: 50px;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+  }
+  
+  .sidebar header .image,
+  .sidebar .icon{
+      min-width: 60px;
+      border-radius: 6px;
+  }
+  
+  .sidebar .icon{
+      min-width: 60px;
+      border-radius: 6px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+  }
+  
+  .sidebar .text,
+  .sidebar .icon{
+      color: var(--text-color);
+      transition: var(--tran-03);
+  }
+  
+  .sidebar .text{
+      font-size: 17px;
+      font-weight: 500;
+      white-space: nowrap;
+      opacity: 1;
+  }
+  .sidebar.close .text{
+      opacity: 0;
+  }
+  /* =========================== */
+  
+  .sidebar header{
+      position: relative;
+  }
+  
+  .sidebar header .image-text{
+      display: flex;
+      align-items: center;
+  }
+  .sidebar header .logo-text{
+      display: flex;
+      flex-direction: column;
+  }
+  header .image-text .name {
+      margin-top: 2px;
+      font-size: 18px;
+      font-weight: 600;
+  }
+  
+  header .image-text .profession{
+      font-size: 16px;
+      margin-top: -2px;
+      display: block;
+  }
+  
+  .sidebar header .image{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .sidebar header .image img{
+      width: 40px;
+      border-radius: 6px;
+  }
+  
+  .sidebar header .toggle{
+      position: absolute;
+      top: 50%;
+      right: -25px;
+      transform: translateY(-50%) rotate(180deg);
+      height: 25px;
+      width: 25px;
+      background-color: var(--primary-color);
+      color: var(--sidebar-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      cursor: pointer;
+      transition: var(--tran-05);
+  }
+  
+  body.dark .sidebar header .toggle{
+      color: var(--text-color);
+  }
+  
+  .sidebar.close .toggle{
+      transform: translateY(-50%) rotate(0deg);
+  }
+  
+  .sidebar .menu{
+      margin-top: 40px;
+  }
+  
+  .sidebar li.search-box{
+      border-radius: 6px;
+      background-color: var(--primary-color-light);
+      cursor: pointer;
+      transition: var(--tran-05);
+  }
+  
+  .sidebar li.search-box input{
+      height: 100%;
+      width: 100%;
+      outline: none;
+      border: none;
+      background-color: var(--primary-color-light);
+      color: var(--text-color);
+      border-radius: 6px;
+      font-size: 17px;
+      font-weight: 500;
+      transition: var(--tran-05);
+  }
+  .sidebar li a{
+      list-style: none;
+      height: 100%;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: var(--tran-03);
+  }
+  
+  .sidebar li a:hover{
+      background-color: var(--primary-color);
+  }
+  .sidebar li a:hover .icon,
+  .sidebar li a:hover .text{
+      color: var(--sidebar-color);
+  }
+  body.dark .sidebar li a:hover .icon,
+  body.dark .sidebar li a:hover .text{
+      color: var(--text-color);
+  }
+  
+  .sidebar .menu-bar{
+      height: calc(100% - 55px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: scroll;
+  }
+  .menu-bar::-webkit-scrollbar{
+      display: none;
+  }
+  .sidebar .menu-bar .mode{
+      border-radius: 6px;
+      background-color: var(--primary-color-light);
+      position: relative;
+      transition: var(--tran-05);
+  }
+  
+  .menu-bar .mode .sun-moon{
+      height: 50px;
+      width: 60px;
+  }
+  
+  .mode .sun-moon i{
+      position: absolute;
+  }
+  .mode .sun-moon i.sun{
+      opacity: 0;
+  }
+  body.dark .mode .sun-moon i.sun{
+      opacity: 1;
+  }
+  body.dark .mode .sun-moon i.moon{
+      opacity: 0;
+  }
+  
+  .menu-bar .bottom-content .toggle-switch{
+      position: absolute;
+      right: 0;
+      height: 100%;
+      min-width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      cursor: pointer;
+  }
+  .toggle-switch .switch{
+      position: relative;
+      height: 22px;
+      width: 40px;
+      border-radius: 25px;
+      background-color: var(--toggle-color);
+      transition: var(--tran-05);
+  }
+  
+  .switch::before{
+      content: '';
+      position: absolute;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+      background-color: var(--sidebar-color);
+      transition: var(--tran-04);
+  }
+  
+  body.dark .switch::before{
+      left: 20px;
+  }
+  
+  .home{
+      position: absolut+e;
+      top: 0;
+      top: 0;
+      left: 250px;
+      height: 100vh;
+      width: calc(100% - 250px);
+      background-color: var(--body-color);
+      transition: var(--tran-05);
+  }
+  .home .text{
+      font-size: 30px;
+      font-weight: 500;
+      color: var(--text-color);
+      padding: 12px 60px;
+  }
+  
+  .sidebar.close ~ .home{
+      left: 78px;
+      height: 100vh;
+      width: calc(100% - 78px);
+  }
+  body.dark .home .text{
+      color: var(--text-color);
+  }
+  </style>
+
+  <body id ="google_element">
+    {%load static%}
+    <body>
+      <nav class="sidebar close">
+          <header>
+              <div class="image-text">
+                  <span class="image">
+                      <img src= '{% static "images/VIVA.png" %}' alt="">
+                  </span>
+    
+                  <div class="text logo-text">
+                      <span class="name">VivaWomen</span>
+                      <span class="profession">Schemes</span>
+                  </div>
+              </div>
+    
+              <i class='bx bx-chevron-right toggle'></i>
+          </header>
+    
+          <div class="menu-bar">
+              <div class="menu">
+    
+                  <li class="search-box">
+                      <i class='bx bx-search icon'></i>
+                      <input type="text" placeholder="Search...">
+                  </li>
+    
+                  <ul class="menu-links">
+                      <li class="nav-link">
+                          <a href="{% url 'index' %}">
+                              <i class='bx bx-home-alt icon' ></i>
+                              <span class="text nav-text">Home</span>
+                          </a>
+                      </li>
+    
+                      <li class="nav-link">
+                          <a href="{% url 'emergency' %}">
+                              <i class='bx bx-error icon' ></i>
+                              <span class="text nav-text">Emergency</span>
+                          </a>
+                      </li>
+    
+                      <li class="nav-link">
+                          <a href="{% url 'services' %}">
+                              <i class='bx bxs-institution icon'></i>
+                              <span class="text nav-text">Services</span>
+                          </a>
+                      </li>
+    
+                      <li class="nav-link">
+                          <a href="{% url 'community' %}">
+                              <i class='bx bx-group icon' ></i>
+                              <span class="text nav-text">Community</span>
+                          </a>
+                      </li>
+    
+                      <li class="nav-link">
+                          <a href="{% url 'schemes' %}">
+                              <i class='bx bxs-report icon' ></i>
+                              <span class="text nav-text">Schemes</span>
+                          </a>
+                      </li>
+    
+                  </ul>
+              </div>
+    
+              <div class="bottom-content">
+                {% if user.is_authenticated %}
+                <li class="nav-link">
+                  <a href="{% url 'users' %}">
+                      <i class='bx bxs-user icon' ></i>
+                      <span class="text nav-text">Welcome  {{ user.get_username }}</span>
+                  </a>
+              </li>
+             
+              
+              <li><a href="{% url 'logout' %}?next={{ request.path }}"><i class='bx bx-log-out icon' ></i>
+                <span class="text nav-text">Logout</span></a></li>
+              {% else %}
+              <li><a href="{% url 'login' %}?next={{ request.path }}"><i class='bx bx-log-out icon' ></i>
+                <span class="text nav-text">Login</span></a></li>
+               {% endif %}
+            
+        
+    
+                  <li class="mode">
+                      <div class="sun-moon">
+                          <i class='bx bx-moon icon moon'></i>
+                          <i class='bx bx-sun icon sun'></i>
+                      </div>
+                      <span class="mode-text text">Dark mode</span>
+    
+                      <div class="toggle-switch">
+                          <span class="switch"></span>
+                      </div>
+                  </li>
+                  
+              </div>
+          </div>
+    
+      </nav>
+    
+
+  <script>
+    const body = document.querySelector('body'),
+  sidebar = body.querySelector('nav'),
+  toggle = body.querySelector(".toggle"),
+  searchBtn = body.querySelector(".search-box"),
+  modeSwitch = body.querySelector(".toggle-switch"),
+  modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+body.classList.toggle("dark");
+
+if(body.classList.contains("dark")){
+    modeText.innerText = "Light mode";
+}else{
+    modeText.innerText = "Dark mode";
+    
+}
+});
+</script>
+<div class="main">
+<ul class="cards">
+  <li class="cards_item">
+    <div class="card">
+      <div class="card_image"><img src='{% static "images/11.jpg" %}' class="a"></div>
+      <div class="card_content">
+        <h2 class="card_title">WEP Program</h2>
+        <p class="card_text">The Women Entrepreneurship Platform (WEP) Program providing different support services like Incubation, training, mentorship, etc.</p>
+        <a href="{% url 'map' %}"><button class="btn card_btn">Read More</button></a>
+      </div>
+    </div>
+  </li>
+  <li class="cards_item">
+    <div class="card">
+      <div class="card_image"><img src='{% static "images/12.jpg" %}' class="a"></div>
+      <div class="card_content">
+        <h2 class="card_title">Mahila Coir Yojana(MCY)</h2>
+        <p class="card_text">MCYis intended to provide self employment opportunities to rural women artisans in regions processing coconut husk.</p>
+        <button class="btn card_btn">Read More</button>
+      </div>
+    </div>
+  </li>
+  <li class="cards_item">
+    <div class="card">
+      <div class="card_image"><img src='{% static "images/13.jpg" %}' class="a"></div>
+      <div class="card_content">
+        <h2 class="card_title">Grant in-aid Scheme</h2>
+        <p class="card_text">The Ministry of Labour and Employment is running the Grant-in-aid Scheme for the welfare of women labour with specific eligibility.</p>
+        <button class="btn card_btn">Read More</button>
+      </div>
+    </div>
+  </li>
+  <li class="cards_item">
+    <div class="card">
+      <div class="card_image"><img src='{% static "images/14.png" %}' class="a"></div>
+      <div class="card_content">
+        <h2 class="card_title">SERB – POWER</h2>
+        <p class="card_text">SERB – POWER is designed to provide structured effort toward enhanced diversity in research to ensure equal access and weighted.</p>
+        <button class="btn card_btn">Read More</button>
+      </div>
+    </div>
+  </li>
+  <li class="cards_item">
+    <div class="card">
+      <div class="card_image"><img src='{% static "images/15.jpg" %}' class="a"></div>
+      <div class="card_content">
+        <h2 class="card_title">e-ILA</h2>
+        <p class="card_text">With the launch of e-ILA, the Ministry of Women and Child Development aims to tap the potential of technology to address this challenge. </p>
+        <button class="btn card_btn">Read More</button>
+      </div>
+    </div>
+  </li>
+  <li class="cards_item">
+    <div class="card">
+      <div class="card_image"><img src='{% static "images/16.jpg" %}' class="a"></div>
+      <div class="card_content"> 
+        <h2 class="card_title">POWER fellowships</h2>
+        <p class="card_text">The fellowship is designed to identify and reward excellent women researchers in Indian academic institutions and R&D laboratories.</p>
+        <button class="btn card_btn">Read More</button>
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+</body>
+</html>
