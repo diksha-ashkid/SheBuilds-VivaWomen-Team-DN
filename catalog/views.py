@@ -41,3 +41,28 @@ class UsersDelete(DeleteView):
     success_url = reverse_lazy('users')
     template_name = 'catalog/user_confirm_delete.html'
     context_object_name = 'user'
+
+def emergency(request):
+
+    # Render the HTML template index.html with the data in the context variable
+    return render(request, 'catalog/emergency.html')
+
+def services(request):
+
+    # Render the HTML template index.html with the data in the context variable
+    return render(request, 'catalog/services.html')
+
+def map(request):
+    
+        # Render the HTML template index.html with the data in the context variable
+        return render(request, 'catalog/map.html')
+
+def schemes(request):
+
+    # Render the HTML template index.html with the data in the context variable
+    return render(request, 'catalog/schemes.html')
+
+def community(request):
+    
+     # Render the HTML template index.html with the data in the context variable
+    return render(request, 'catalog/community.html')
